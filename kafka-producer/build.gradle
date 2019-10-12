@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' version '0.22.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    
+    implementation 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    implementation enforcedPlatform('io.quarkus:quarkus-bom:0.22.0')
+    implementation 'io.quarkus:quarkus-resteasy'
+    // https://mvnrepository.com/artifact/io.quarkus/quarkus-smallrye-reactive-messaging-kafka
+    implementation group: 'io.quarkus', name: 'quarkus-smallrye-reactive-messaging-kafka', version: '0.23.1'
+}
